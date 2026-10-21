@@ -39,8 +39,9 @@ export class ListaCliente {
 
   readonly colunas: PoTableColumn[] = [
     { property: 'nome', label: 'Nome' },
-    { property: 'telefone', label: 'Telefone' },
-    { property: 'celular', label: 'Celular' },
+    { property: 'cpf', label: 'CPF', mask: '999.999.999-99' },
+    { property: 'telefone', label: 'Telefone', mask: '(99) 9999-9999' },
+    { property: 'celular', label: 'Celular', mask: '(99) 99999-9999' },
     { property: 'data_nascimento', label: 'Nascimento', type: 'date' },
     { property: 'email', label: 'E-mail' },
   ];

@@ -24,7 +24,7 @@ import { NovoCliente } from './novo_cliente';
     NovoCliente,
   ],
   template: `
-    <po-page-list p-title="Clientes" [p-actions]="acoes">
+    <po-page-default p-title="Clientes" [p-actions]="acoes">
       <po-container p-title="Filtros">
         <div class="po-row">
           <po-input
@@ -76,7 +76,7 @@ import { NovoCliente } from './novo_cliente';
         [filtroCidade]="filtroCidade()"
         [filtroEstado]="filtroEstado()">
       </app-lista-cliente>
-    </po-page-list>
+    </po-page-default>
 
     <app-novo-cliente (salvo)="recarregar()" />
   `,
@@ -90,9 +90,9 @@ export class Clientes {
   readonly filtroCidade = signal('');
   readonly filtroEstado = signal('');
 
-  readonly acoes: PoPageAction[] = [
-    { label: 'Novo cliente', icon: 'an an-plus', action: () => this.modalNovo.open() },
-  ];
+ readonly acoes: PoPageAction[] = [
+  { label: 'Novo cliente', icon: 'an an-plus', action: () => this.modalNovo.open() },
+];
 
   readonly estadosFiltro: PoSelectOption[] = [
     { label: 'Todos', value: '' },

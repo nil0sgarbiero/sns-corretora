@@ -21,7 +21,7 @@ import { SupabaseService } from '../services/supabase.service';
       </po-toolbar>
 
       <po-menu
-        p-logo="/sns-logo.svg"
+        p-logo="/sns-logo-atual.png"
         p-short-logo="/favicon.png"
         p-logo-alt="SNS Corretora de Seguros"
         p-logo-link="/painel"
@@ -41,7 +41,7 @@ export class Layout {
   readonly menus: PoMenuItem[] = [
     { label: 'Painel', icon: 'an an-house', shortLabel: 'Painel', link: '/painel' },
     { label: 'Clientes', icon: 'an an-users', shortLabel: 'Clientes', link: '/clientes' },
-    { label: 'Fornecedores', icon: 'an an-truck', shortLabel: 'Fornec.', link: '/fornecedores' },
+    { label: 'Seguradoras', icon: 'an an-shield-check', shortLabel: 'Segurad.', link: '/fornecedores' },
     { label: 'Apólices', icon: 'an an-file-text', shortLabel: 'Apólices', link: '/apolices' },
   ];
 

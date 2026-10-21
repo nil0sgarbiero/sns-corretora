@@ -55,7 +55,7 @@ export class Painel {
 
   readonly indicadores = signal<Indicador[]>([
     { label: 'Clientes', valor: 0, icone: 'an an-users', rota: '/clientes' },
-    { label: 'Fornecedores', valor: 0, icone: 'an an-truck', rota: '/fornecedores' },
+    { label: 'Seguradoras', valor: 0, icone: 'an an-shield-check', rota: '/fornecedores' },
     { label: 'Apólices', valor: 0, icone: 'an an-file-text', rota: '/apolices' },
   ]);
 
@@ -64,31 +64,32 @@ export class Painel {
   }
 
   private async carregar(): Promise<void> {
-  const contagens = await Promise.all([
-    this.contar('clientes'),
-    this.contar('fornecedores'),
-    this.contar('apolices'),
-  ]);
+    const contagens = await Promise.all([
+      this.contar('clientes'),
+      this.contar('fornecedores'),
+      this.contar('apolices'),
+    ]);
 
-  this.indicadores.set([
-    { label: 'Clientes', valor: contagens[0], icone: 'an an-users', rota: '/clientes' },
-    { label: 'Fornecedores', valor: contagens[1], icone: 'an an-truck', rota: '/fornecedores' },
-    { label: 'Apólices', valor: contagens[2], icone: 'an an-file-text', rota: '/apolices' },
-  ]);
-}
+    this.indicadores.set([
+      { label: 'Clientes', valor: contagens[0], icone: 'an an-users', rota: '/clientes' },
+      { label: 'Seguradoras', valor: contagens[1], icone: 'an an-shield-check', rota: '/fornecedores' },
+      { label: 'Apólices', valor: contagens[2], icone: 'an an-file-text', rota: '/apolices' },
+    ]);
+  }
 
-private async contar(tabela: string): Promise<number> {
-  const { count, error } = await this.supabase.client
-    .from(tabela)
-    .select('*', { count: 'exact', head: true });
+  private async contar(tabela: string): Promise<number> {
+    const { count, error } = await this.supabase.client
+      .from(tabela)
+      .select('*', { count: 'exact', head: true });
 
     if (error) {
       console.error(`Erro ao contar ${tabela}:`, error.message);
       return 0;
     }
 
-  return count ?? 0;
+    return count ?? 0;
   }
+
   abrir(rota: string): void {
     this.router.navigate([rota]);
   }

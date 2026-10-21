@@ -1,0 +1,154 @@
+{
+  "colorOverridesByNodeId": {},
+  "mindmap": {
+    "version": "1",
+    "title": "Roadmap SNS Corretora de Seguros",
+    "layoutMode": "distributed",
+    "tree": {
+      "id": "root",
+      "label": "Roadmap SNS Corretora",
+      "children": [
+        {
+          "id": "clientes",
+          "label": "Módulo Clientes",
+          "children": [
+            {
+              "id": "clientes-concluido",
+              "label": "Concluído: CRUD básico, filtros e máscaras",
+              "children": [
+                {
+                  "id": "cli-criar",
+                  "label": "Criar cliente"
+                },
+                {
+                  "id": "cli-listar",
+                  "label": "Listar clientes"
+                },
+                {
+                  "id": "cli-editar",
+                  "label": "Editar cliente"
+                },
+                {
+                  "id": "cli-filtros",
+                  "label": "Filtros de busca"
+                },
+                {
+                  "id": "cli-mascaras",
+                  "label": "Máscaras CPF, telefone e celular"
+                }
+              ]
+            },
+            {
+              "id": "clientes-pendente",
+              "label": "Pendências",
+              "children": [
+                {
+                  "id": "cli-excluir",
+                  "label": "Exclusão de registros"
+                },
+                {
+                  "id": "cli-detalhes",
+                  "label": "Tela de detalhes"
+                },
+                {
+                  "id": "cli-validacao",
+                  "label": "Validação de CPF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fornecedores",
+          "label": "Fornecedores e Seguradoras",
+          "children": [
+            {
+              "id": "forn-crud",
+              "label": "CRUD completo"
+            },
+            {
+              "id": "forn-campos",
+              "label": "CNPJ, razão social e contato"
+            }
+          ]
+        },
+        {
+          "id": "apolices",
+          "label": "Apólices",
+          "children": [
+            {
+              "id": "apol-rel",
+              "label": "Relacionamento cliente e seguradora"
+            },
+            {
+              "id": "apol-dados",
+              "label": "Ramo, vigência, prêmio e comissão"
+            },
+            {
+              "id": "apol-status",
+              "label": "Gestão de status"
+            }
+          ]
+        },
+        {
+          "id": "renovacoes",
+          "label": "Renovações",
+          "children": [
+            {
+              "id": "ren-alerta",
+              "label": "Alerta de vencimento 30 dias"
+            },
+            {
+              "id": "ren-hist",
+              "label": "Histórico de renovações"
+            }
+          ]
+        },
+        {
+          "id": "painel",
+          "label": "Painel de Controle",
+          "children": [
+            {
+              "id": "painel-ativos",
+              "label": "Clientes ativos"
+            },
+            {
+              "id": "painel-vigentes",
+              "label": "Apólices vigentes"
+            },
+            {
+              "id": "painel-financeiro",
+              "label": "Prêmio total e comissão do mês"
+            },
+            {
+              "id": "painel-venc",
+              "label": "Vencimentos próximos"
+            }
+          ]
+        },
+        {
+          "id": "infra",
+          "label": "Infraestrutura e Qualidade",
+          "children": [
+            {
+              "id": "infra-rls",
+              "label": "RLS no Supabase"
+            },
+            {
+              "id": "infra-lazy",
+              "label": "Lazy loading nas rotas"
+            },
+            {
+              "id": "infra-net",
+              "label": "Redirect SPA no Netlify"
+            },
+            {
+              "id": "infra-erro",
+              "label": "Tratamento de erro ao usuário"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
