@@ -35,8 +35,6 @@ yarn-error.log
 .history/*
 
 # Ambiente — contém as chaves
-src/environments/environment.ts
-src/environments/environment.prod.ts
 src/environments/environment.development.ts
 
 # Miscellaneous
