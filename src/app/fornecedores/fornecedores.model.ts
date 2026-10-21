@@ -1,7 +1,7 @@
 export type TipoFornecedor = 'seguradora' | 'prestador';
 
 export interface Fornecedor {
-  cod_fornecedor?: string;
+  cod_fornecedor?: number;
   tipo: TipoFornecedor;
   razao_social: string;
   nome_fantasia?: string | null;

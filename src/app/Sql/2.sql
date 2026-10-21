@@ -3,7 +3,7 @@
 -- ============================================================
 
 create table if not exists public.fornecedores (
-  id                    uuid primary key default gen_random_uuid(),
+  cod_fornecedor  bigint generated always as identity primary key,
 
   -- Classificação: permite usar a mesma tabela para prestadores no futuro
   tipo                  text not null default 'seguradora'
